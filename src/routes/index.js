@@ -31,8 +31,8 @@ router.post('/emails/contact', async(req, res) =>{
             <FONT COLOR="DarkSlateBlue"><h1>A ${name} le gustaría ponerse en contacto contigo.</h1></FONT>
             <FONT COLOR="DarkSlateBlue"><p>${message}</p></FONT>
             <ul>
-            <li type="disc"><FONT COLOR="DarkSlateBlue"><b>Email:</b> ${email}</FONT></li>
             <li type="disc"><FONT COLOR="DarkSlateBlue"><b>Phone:</b> ${phone}</FONT></li>
+            <li type="disc"><FONT COLOR="DarkSlateBlue"><b>Email:</b> ${email}</FONT></li>
             </ul> 
         `
     })
