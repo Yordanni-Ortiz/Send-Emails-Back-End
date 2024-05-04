@@ -11,7 +11,7 @@ router.post('/emails/sayhi', async(req, res) => {
     const { name, email, phone, message } = req.body;
     await sendEmail({
         to: "yordannimod@gmail.com",
-        subject: `¡${name} te escribió desde tu portafolio!`,
+        subject: `¡${name} te escribió desde tu página web!`,
         html: `<FONT COLOR="purple"><p>${message}</p></FONT>
         <ul>
         <li type="disc"><FONT COLOR="purple"><b>Phone</b> ${phone}</FONT></li>
