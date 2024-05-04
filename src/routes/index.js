@@ -14,8 +14,9 @@ router.post('/emails/sayhi', async(req, res) => {
         subject: `¡${name} te escribió desde tu página web!`,
         html: `<FONT COLOR="purple"><p>${message}</p></FONT>
         <ul>
-        <li type="disc"><FONT COLOR="purple"><b>Phone</b> ${phone}</FONT></li>
-        <li type="disc"><FONT COLOR="purple"><b>Email</b> ${email}</FONT></li>
+        <li type="disc"><FONT COLOR="DarkSlateBlue"><b>Phone:</b> ${phone}</FONT></li>
+        <li type="disc"><FONT COLOR="DarkSlateBlue"><b>Email:</b> ${email}</FONT></li>
+        
         </ul> 
     `
     })
