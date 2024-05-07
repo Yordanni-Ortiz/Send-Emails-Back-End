@@ -24,9 +24,21 @@ router.post('/emails/sayhi', async(req, res) => {
 });
 
 router.post('/emails/contact', async(req, res) =>{
-    const { name, email,  phone, message } = req.body;
+    const { name, email,  phone, message, section } = req.body;
+    let recipientEmail;
+    switch(section) {
+        case 'oranyceballos':
+            recipientEmail = 'oranyceballos@gmail.com';
+            break;
+        case 'zitrogold':
+            recipientEmail = 'zitrogoldinc@gmail.com';
+            break;
+        // puedes agregar más casos según sea necesario
+        default:
+            recipientEmail = 'yordannimod@gmail.com';
+    }
     await sendEmail({
-        to: "yordannimod@gmail.com",
+        to: recipientEmail,
         subject: `¡${name} te escribió desde tu página web!`,
         html: `
             <FONT COLOR="DarkSlateBlue"><h1>A ${name} le gustaría ponerse en contacto contigo.</h1></FONT>
