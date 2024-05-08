@@ -16,7 +16,6 @@ router.post('/emails/sayhi', async(req, res) => {
         <ul>
         <li type="disc"><FONT COLOR="DarkSlateBlue"><b>Phone:</b> ${phone}</FONT></li>
         <li type="disc"><FONT COLOR="DarkSlateBlue"><b>Email:</b> ${email}</FONT></li>
-        
         </ul> 
     `
     })
@@ -24,7 +23,7 @@ router.post('/emails/sayhi', async(req, res) => {
 });
 
 router.post('/emails/contact', async(req, res) =>{
-    const { name, email,  phone, message, section } = req.body;
+    const { name, email, phone, message, section } = req.body;
     let recipientEmail;
     switch(section) {
         case 'oranyceballos':
@@ -33,7 +32,6 @@ router.post('/emails/contact', async(req, res) =>{
         case 'zitrogold':
             recipientEmail = 'zitrogoldinc@gmail.com';
             break;
-        // puedes agregar más casos según sea necesario
         default:
             recipientEmail = 'yordannimod@gmail.com';
     }
